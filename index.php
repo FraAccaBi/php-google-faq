@@ -49,15 +49,13 @@ $faqs = [
     ]        
 
 ];
-
-
-
-/* foreach($domande as $domanda): 
-    echo $domanda;
-    foreach($risposte as $risposta):
-        echo $risposta;
-    endforeach;
-endforeach; */
+$nav = [
+    'Installazione',
+    'Norme sulla privacy',
+    'Termini di servizio',
+    'Tecnologie',
+    'Domande frequenti'
+];
 
 ?>
 
@@ -68,20 +66,39 @@ endforeach; */
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
+<header>
+    <div class="logo">
 
+    </div>
+    <h1>Privacy & Termini</h1>
+</header>
+<nav>
+    <ul class="d-flex">
+        <?php foreach($nav as $element): ?>
+            <li class="list-unstyled"> <?= $element; ?> </li>
+        <?php endforeach ?>
+    </ul>
+</nav>
     
 <?php foreach($faqs as $element): ?>
+
     <h2> <?= $element['domanda']; ?> </h2>
+
     <?php foreach($element as $risposte): ?>
+
         <?php foreach($risposte as $key => $risposta): ?>
+
             <p> <?= $risposta; ?> </p>
+            
         <?php endforeach ?>
     <?php endforeach ?>
 <?php endforeach ?>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
