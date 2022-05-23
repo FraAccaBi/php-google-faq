@@ -68,18 +68,22 @@ $logo_img = "https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_c
     <title>Document</title>
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="d-flex">
+<header class="d-flex p-2">
     <div class="logo">
         <img src="<?= $logo_img; ?>" alt="">
     </div>
-    <h1 class="h5">Privacy & Termini</h1>
+    <h1 class="h5 ps-2">Privacy & Termini</h1>
 </header>
 <nav>
-    <ul class="d-flex">
+    <ul class="d-flex p-0">
         <?php foreach($nav as $element): ?>
-            <li class="list-unstyled"> <?= $element; ?> </li>
+            <li class="list-unstyled p-2"> <?= $element; ?> </li>
         <?php endforeach ?>
     </ul>
 </nav>
